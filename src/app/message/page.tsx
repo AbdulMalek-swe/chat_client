@@ -66,7 +66,7 @@ const Home = () => {
         getMessage()
     }, [userData])
     return (
-        <div className="text-black">
+        <div className="text-white">
             {
                 user.map((item: any, index: any) => <div key={index} onClick={() => setUserData(item)}>
                     <h1>{item?.email}</h1>
@@ -80,7 +80,7 @@ const Home = () => {
                     </div>)
                 }
             </div>
-            <div>
+            <div className="text-white">
                 <input onChange={(e) => setMessage(e.target.value)} />
                 <button onClick={handleSend}>send</button>
             </div>
