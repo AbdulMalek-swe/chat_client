@@ -17,6 +17,7 @@ const Login = () => {
             const response = await axios.post(`https://chat-api-2-aelj.onrender.com/user/login`, formData);
             // Handle the response, e.g., show a success message or redirect the user
             console.log('Registration successful:', response.data);
+            localStorage.setItem("user", JSON.stringify(response?.data?.result))
             return response?.data;
         } catch (error) {
             // Handle errors, e.g., show an error message to the user
